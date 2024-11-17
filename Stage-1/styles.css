@@ -60,13 +60,21 @@ a {
     color: #00bcd4;
     transform: translateY(-5px);
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 /* Home Section */
 .home {
     background-color: rgb(75, 74, 133);
     text-align: center;
     height: 60vh;
-    padding: 10vh 20px;
+    padding: 25vh 20px;
     color: white;
 }
 
@@ -183,7 +191,12 @@ a {
     gap: 15px;
 }
 
-.contact input {
+.one{
+    display: inline;
+    gap: 20px;
+}
+.contact form input {
+    display: block;
     width: 100%;
     max-width: 400px;
     padding: 12px;
@@ -245,10 +258,11 @@ a {
         flex-direction: column;
         gap: 10px;
     }
-
+   
     .project-container {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
     }
 
     .contact form {
