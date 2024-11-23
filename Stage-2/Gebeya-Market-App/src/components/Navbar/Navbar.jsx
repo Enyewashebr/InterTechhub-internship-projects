@@ -7,70 +7,95 @@ import dropdown from "../../assets/down-arrow.png";
 import search from "../../assets/search.png";
 import bag from "../../assets/bag.png";
 import flag from "../../assets/uk-flag.png";
-import notification from "../../assets/notfication.png";
+// import notification from "../../assets/notfication.png";
 import search2 from '../../assets/search2.png'
 const Navbar = () => {
+  const moreMenu = [
+    {to: "/perfumes", text: "Perfumes"},
+    {to: "/Jewelries", text: "Jewelries"},
+    {to: "/Gym wears", text: "Gym wears"},
+    {to: "/Ventage wear", text: "Ventage wear"},
+    {to: "/Sport wear", text: "Sport wears"},
+    {to: "/Pyjamas", text: "Pyjamas"},
+    {to: "/Slippers", text: " Slippers"},
+    
+  ]
   return (
-    <div className="navbar">
-      {/* Logo Section */}
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div>
+    <div className="nav-container">
+      <img src={logo} alt="Logo" className="logo-img" />
 
       {/* Register/Sign In Section */}
-      <div className="div-2">
-        <div className="register">
-          <ul>
-            <li>
-              <img src={profile} alt="Profile" />
+
+      {/* Category Links */}
+      <div className="category">
+        <div className="profile-container">
+          <div className="profile">
+            <img src={profile} alt="Profile" className="profile-img" />
+            <h2
+              className="Register-SignIn
+            border-b border-gray-300 "
+            >
               Register/Sign In
-              <img src={dropdown} alt="Dropdown" />
-            </li>
-          </ul>
+            </h2>
+            <img src={dropdown} alt="Dropdown" className="register-drop" />
+          </div>
+          <div className="register-signin">
+            <h2 className="register">Register</h2>
+            <h3>
+              <hr />
+            </h3>
+            <h2 className="signin">Sign In</h2>
+          </div>
         </div>
 
-        {/* Category Links */}
-        <div className="category">
-          <ul>
-            <li>Home</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Kids</li>
-            <li>Accessories</li>
-            <li>
-              More
-              <img src={dropdown} alt="Dropdown" />
-            </li>
-          </ul>
+        <div className="home">Home</div>
+        <div className="men">Men</div>
+        <div className="women">Women</div>
+        <div className="kids">Kids</div>
+        <div className="accessories">Accessories</div>
+
+        <div className="more-categories">
+          <div className="more-container">
+            <h2 className="more">More</h2>
+            <img src={dropdown} alt="" className="more-drop" />
+          </div>
+          <div className="drop-lists">
+            {moreMenu.map(({ to, text }, index) => (
+              <a key={index} href={to} className="list">
+                {text} <hr />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Search Bar Section */}
-      <div className="search-container">
-        <div className="search-box">
-          <img src={search} alt="Search Icon" />
-          <input type="text" placeholder="Search" />
-          <button className="search-btn">
-            <img src={search2} alt="" />
-          </button>
+
+      <div className="search-box">
+        <div className="input-container">
+          <img src={search} alt="" className="search-img" />
+          <input type="text" placeholder="Search" className="search-input" />
         </div>
+
+        <button
+          type="submit"
+         
+        >
+          <img src={search2} alt="" className="search-icon" />
+        </button>
       </div>
 
       {/* Currency Section */}
-      <div className="currency-change">
-        <img src={flag} alt="Flag" />
-        <p>EN/Currency</p>
-        <img src={dropdown} alt="Dropdown" />
+      <div className="currency-change flex items-center gap-2">
+        <img src={flag} alt="" className="flag-img" />
+        <h2>EN/Currency</h2>
+        <img src={dropdown} alt="Dropdown" className="currency-drop " />
       </div>
 
       {/* Cart Section */}
-      <div className="cart-container">
-        <img src={bag} alt="Shopping Bag" className="bag-image" />
-        <img
-          src={notification}
-          alt="Notification Badge"
-          className="notification-number"
-        />
+      <div className="cart-container flex items-center">
+        <img src={bag} alt="Shopping Bag" className="bag-img" />
+        <h2>2</h2>
       </div>
     </div>
   );
