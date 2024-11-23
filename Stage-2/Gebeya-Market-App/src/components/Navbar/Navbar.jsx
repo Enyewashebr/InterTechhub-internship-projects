@@ -48,11 +48,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="home">Home</div>
-        <div className="men">Men</div>
-        <div className="women">Women</div>
-        <div className="kids">Kids</div>
-        <div className="accessories">Accessories</div>
+        <div className="home w-[49px] h-[24px] font-poppins text-[16px] font-[700] leading-[24px] text-[#1E1E1E] cursor-pointer">Home</div>
+        <div className="men w-[34px] h-[24px] font-poppins text-[16px] font-[400] leading-[24px] text-[#1E1E1E] cursor-pointer">Men</div>
+        <div className="women w-[63px] h-[24px] font-poppins text-[16px] font-[400] leading-[24px] text-[#1E1E1E] cursor-pointer">Women</div>
+        <div className="kids w-[33px] h-[24px] font-poppins text-[16px] font-[400] leading-[24px] text-[#1E1E1E] cursor-pointer">Kids</div>
+        <div className="accessories w-[96px] h-[24px] font-poppins text-[16px] font-[400] leading-[24px] text-[#1E1E1E] cursor-pointer">Accessories</div>
 
         <div className="more-categories">
           <div className="more-container">
