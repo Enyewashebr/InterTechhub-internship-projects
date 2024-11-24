@@ -4,13 +4,20 @@ import "./Home.css"
 import home_img1 from "../../assets/home_img1.png"
 import home_img2 from "../../assets/home_img2.png"
 import home_img3 from "../../assets/home_img3.png"
+// import ProductSection from "../../components/ProductSection/ProductSection"
+import CategorySection from "../../components/CategorySection/CategorySection"
+import Footer from "../../components/Footer/Footer"
+// import ProductCard from "../../components/ProductCard/ProductCard"
+import ProductList from "../../components/ProductList/ProductList"
+import arrow1 from "../../assets/arrow1.png";
+import arrow2 from "../../assets/arrow2.png";
 
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="home-container w-full h-[769px] top-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center">
+      <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center Z-0">
         <div className="left-div  block  justify-center items-center p-[15px] flex-1  ml-[60px] mt-[50px] ml-[90px]">
           <h1 className=" w-[497px] h-[175px] top-[193px] left-[80px] font-alfa-slab-one text-[128px]  leading-[175.23px] text-white text-bold font-Anton-Regular mb-[30px] mt-[50px] ml-[30px]">
             Gebeya
@@ -27,7 +34,7 @@ const Home = () => {
             alt=""
             className=" h-[300px] justify-center  rounded-full  mt-[10px] "
           />
-          <button className="w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px] rounded-[8px] rounded-[8px]  bg-[#FEA301] top-[170px]">
+          <button className="w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px] rounded-[8px] rounded-[8px]  bg-[#FEA301] top-[170px] font-poppins font-500 text-24 ">
             Explore Now
           </button>
         </div>
@@ -46,6 +53,18 @@ const Home = () => {
           />
         </div>
       </div>
+      <div className="product-category flex justify-between mt-[50px] p-[20px]">
+        <h2 className="latest w-388  left-80 font-poppins text-2xl font-semibold font-normal antialiased tracking-wider leading-60">
+          Latest Collections
+        </h2>
+        <div className="scroll-side flex gap-8 items-center  ">
+          <img src={arrow1} alt="" className="w-8 h-8 cursor-pointer" />
+          <img src={arrow2} alt="" className="w-8 h-8 cursor-pointer" />
+        </div>
+      </div>
+      <ProductList />
+      <CategorySection />
+      <Footer />
     </>
   );
 }

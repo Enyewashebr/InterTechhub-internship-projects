@@ -1,16 +1,26 @@
 /* General Navbar Styling */
-.nav-container {
+.navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.navbar .nav-container {
   width: full;
   height: 47px;
   margin: 24px 80px 24px 80px;
   display: flex;
-  position: sticky;
+  /* position: relative; */
   justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: #fff;
+  z-index: 100;
   /* box-shadow: #C6C6C6 0px 3px 8px; */
   gap: 35px;
+  /* position: sticky; */
   
 }
 .nav-container .logo-img {
