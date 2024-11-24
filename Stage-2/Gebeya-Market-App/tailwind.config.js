@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "alfa-slab-one": ['"Alfa Slab One"', "sans-serif"],
+        "alfa-slab": ['"Alfa Slab One"', "sans-serif"],
+        Poppins: ['Poppins', 'sans-serif']
         
       },
     },

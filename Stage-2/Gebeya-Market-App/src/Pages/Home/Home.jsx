@@ -12,14 +12,14 @@ import ProductList from "../../components/ProductList/ProductList"
 import arrow1 from "../../assets/arrow1.png";
 import arrow2 from "../../assets/arrow2.png";
 
-
+const categories = ["Men", "Women", "Kids", "Perfumes", "Sport", "Jewelry"];
 const Home = () => {
   return (
     <>
       <Navbar />
       <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center Z-0">
         <div className="left-div  block  justify-center items-center p-[15px] flex-1  ml-[60px] mt-[50px] ml-[90px]">
-          <h1 className=" w-[497px] h-[175px] top-[193px] left-[80px] font-alfa-slab-one text-[128px]  leading-[175.23px] text-white text-bold font-Anton-Regular mb-[30px] mt-[50px] ml-[30px]">
+          <h1 className=" w-[497px] h-[175px] top-[193px] left-[80px] font-alfa-slab text-[128px]  leading-[175.23px] text-white text-bold font-Anton-Regular mb-[30px] mt-[50px] ml-[30px]">
             Gebeya
           </h1>
           <img
@@ -39,11 +39,11 @@ const Home = () => {
           </button>
         </div>
         <div className="right-div  block   justify-center items-center mt-[50px] mr-[60px] pt-[70px]  relative">
-          <p className=" w-[435px] h-[128px]   font-poppins text-[20px] text-white font-normal leading-[32px] pt-[10px] pl-[30px] pr-[30px] mb-[40px]">
+          <p className=" w-[435px] h-[128px]   font-Poppins text-[20px] text-white font-normal leading-[32px] pt-[10px] pl-[30px] pr-[30px] mb-[40px]">
             Discover a world of convenience with our user-friendly platform,
             curaated collections, and exceptional customer service
           </p>
-          <h1 className="w-[390px]  h-[175px] top-[366px] left-[1007px] font-alfa-slab-one text-[128px] text-white font-Anton-Regular leading-[175.23px]  mt-[30px] pl-[30px]">
+          <h1 className="w-[390px]  h-[175px] top-[366px] left-[1007px] font-alfa-slab text-[128px] text-white font-Anton-Regular leading-[175.23px]  mt-[30px] pl-[30px]">
             SHOP
           </h1>
           <img
@@ -63,6 +63,11 @@ const Home = () => {
         </div>
       </div>
       <ProductList />
+      <div className="catagories flex justify-between">
+        {categories.map((category) => (
+          <button key={category}>{category}</button>
+        ))}
+      </div>
       <CategorySection />
       <Footer />
     </>

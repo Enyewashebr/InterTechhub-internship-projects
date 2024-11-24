@@ -35,7 +35,7 @@ const Navbar = () => {
                 <img src={profile} alt="Profile" className="profile-img" />
                 <h2
                   className="Register-SignIn
-            border-b border-gray-300 "
+            border-b border-gray-300 text-10 font-poppins"
                 >
                   Register/Sign In
                 </h2>

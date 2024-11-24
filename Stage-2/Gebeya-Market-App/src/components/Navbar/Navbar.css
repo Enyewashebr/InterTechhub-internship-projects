@@ -17,7 +17,7 @@
   align-items: center;
   text-align: center;
   background-color: #fff;
-  z-index: 100;
+  /* z-index: 100; */
   /* box-shadow: #C6C6C6 0px 3px 8px; */
   gap: 35px;
   /* position: sticky; */
@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 .nav-container .category {
-  width: 644px;
+  /* width: ; */
   height: 24px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   /* position: ; */
 }
 .category .profile-container {
-width:165px;
+/* width:175px; */
 height: 24px;
 gap: 4px;
 
@@ -55,15 +55,16 @@ gap: 4px;
 height: 16px;
 padding: 1.33px 2px 2px 2px;
 gap: 4px;
-opacity: 0px;
+/* opacity: 0px; */
 
 }
 
 .profile .Register-SignIn {
   width: 139px;
 height: 24px;
-gap: 4px;
-opacity: 0px;
+gap: px;
+padding: 0 4px;
+/* opacity: 0px; */
 font-family: Poppins;
 font-size: 16px;
 font-weight: 400;
@@ -89,10 +90,11 @@ width: 194px;
 height: 44px;
 padding: 10px 16px 10px 16px;
 gap: 10px;
-font-family: Poppins;
+font-family:Poppins;
 font-size: 16px;
 font-weight: 700;
 line-height: 24px;
+
 }
 .register-signin  hr{
 width: 127px;

@@ -7,7 +7,6 @@ import "./ProductCard.css";
 const ProductCard = ({ image, name, brand, price, rating, category }) => {
   return (
     <>
-      
       <div className="product-card ">
         <div className="product-card-upper">
           <div className="product-card-header">
@@ -18,18 +17,17 @@ const ProductCard = ({ image, name, brand, price, rating, category }) => {
           <div className="rate-category">
             <span className="category">{category}</span>
             <span className="rate">⭐ {rating} rating</span>
-
           </div>
         </div>
         <div className="product-card-lower">
-            <div className="product-details">
-                <h3 className="product-name">{name}</h3>
-                <p className="brand">{brand}</p>
-                <span className="price">${price}</span>
-            </div>
-            <button className="add-to-cart-btn">Add to cart</button>
+          <div className="product-details">
+            <h3 className="product-name">{name}</h3>
+            <p className="brand">{brand}</p>
+            <span className="price">${price}</span>
+          </div>
+          <button className="add-to-cart-btn">Add to cart</button>
         </div>
-    </div>
+      </div>
     </>
   );
 };
