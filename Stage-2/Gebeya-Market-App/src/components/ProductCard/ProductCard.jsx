@@ -1,8 +1,7 @@
 // import React from "react";
 import "./ProductCard.css";
+import PropTypes from "prop-types";
 
-// import bag2 from "../../assets/bag2.png";
-// import ProductList from "../ProductList/ProductList";
 
 const ProductCard = ({ image, name, brand, price, rating, category }) => {
   return (
@@ -31,5 +30,12 @@ const ProductCard = ({ image, name, brand, price, rating, category }) => {
     </>
   );
 };
-
+ProductCard.propTypes = {
+  image: PropTypes.string.isRequired, 
+  name: PropTypes.string.isRequired, 
+  brand: PropTypes.string.isRequired, 
+  price: PropTypes.number.isRequired, 
+  rating: PropTypes.string.isRequired, 
+  category: PropTypes.string.isRequired, 
+};
 export default ProductCard;

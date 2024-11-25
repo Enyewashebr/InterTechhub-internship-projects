@@ -4,22 +4,5 @@
 
 
 
-.catagories{
-    width: full;
-height: 68px;
-/* top: 1720px; */
-/* left: 84px; */
-gap: 24px;
-opacity: 0px;
-padding: 44px;
-}
-.catagories button{
-    width: 205px;
-height: 68px;
-padding: 10px;
-gap: 10px;
-border-radius: 100px;
 
-border: 2px solid #C1C1C1
-}
 

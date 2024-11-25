@@ -12,15 +12,13 @@
   height: 47px;
   margin: 24px 80px 24px 80px;
   display: flex;
-  /* position: relative; */
   justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: #fff;
-  /* z-index: 100; */
-  /* box-shadow: #C6C6C6 0px 3px 8px; */
+ 
   gap: 35px;
-  /* position: sticky; */
+ 
   
 }
 .nav-container .logo-img {

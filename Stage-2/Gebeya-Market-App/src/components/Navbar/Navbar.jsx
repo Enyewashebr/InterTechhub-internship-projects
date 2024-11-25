@@ -7,8 +7,12 @@ import dropdown from "../../assets/down-arrow.png";
 import search from "../../assets/search.png";
 import bag from "../../assets/bag.png";
 import flag from "../../assets/uk-flag.png";
-// import notification from "../../assets/notfication.png";
 import search2 from '../../assets/search2.png'
+
+
+
+
+
 const Navbar = () => {
   const moreMenu = [
     {to: "/perfumes", text: "Perfumes"},

@@ -1,19 +1,22 @@
-// import React from 'react'
+// import { useState } from 'react'
 import Navbar from "../../components/Navbar/Navbar"
 import "./Home.css"
 import home_img1 from "../../assets/home_img1.png"
 import home_img2 from "../../assets/home_img2.png"
 import home_img3 from "../../assets/home_img3.png"
 // import ProductSection from "../../components/ProductSection/ProductSection"
-import CategorySection from "../../components/CategorySection/CategorySection"
-import Footer from "../../components/Footer/Footer"
+// import CategorySection from "../../components/CategorySection/CategorySection"
+// import Footer from "../../components/Footer/Footer"
 // import ProductCard from "../../components/ProductCard/ProductCard"
 import ProductList from "../../components/ProductList/ProductList"
 import arrow1 from "../../assets/arrow1.png";
 import arrow2 from "../../assets/arrow2.png";
+import CategoryData from '../../components/CategoryData/CategoryData'
 
-const categories = ["Men", "Women", "Kids", "Perfumes", "Sport", "Jewelry"];
+// const categories = ["Men", "Women", "Kids", "Perfumes", "Sport", "Jewelry"];
 const Home = () => {
+  // const [activeCategory, setActiveCategory] = useState("Women"); 
+
   return (
     <>
       <Navbar />
@@ -63,13 +66,9 @@ const Home = () => {
         </div>
       </div>
       <ProductList />
-      <div className="catagories flex justify-between">
-        {categories.map((category) => (
-          <button key={category}>{category}</button>
-        ))}
-      </div>
-      <CategorySection />
-      <Footer />
+      <CategoryData />
+      {/* <CategorySection /> */}
+      {/* <Footer /> */}
     </>
   );
 }

@@ -34,14 +34,15 @@ const products = [
     category: "Women",
   },
 ];
-
 const ProductList = () => {
   return (
-    <div className="product-list ">
-      {products.map((product, index) => (
-        <ProductCard key={index} {...product} />
-      ))}
-    </div>
+    <>
+      <div className="product-list ">
+        {products.map((product, index) => (
+          <ProductCard key={index} {...product} />
+        ))}
+      </div>
+    </>
   );
 };
 
@@ -56,7 +57,7 @@ ProductList.propTypes = {
       rating: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
     })
-  ).isRequired,
+  ),
 };
 
 

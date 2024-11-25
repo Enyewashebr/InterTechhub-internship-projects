@@ -1,0 +1,126 @@
+.catagories{
+    width: full;
+height: 68px;
+gap: 24px;
+padding: 44px;
+}
+.catagories .category-button{
+    width: 205px;
+height: 68px;
+padding: 10px;
+gap: 10px;
+border-radius: 100px;
+transition: background-color 0.3s, color 0.3s;
+border: 2px solid #C1C1C1
+}
+.catagories .category-button.active {
+    background-color: orange; 
+    color: white; 
+    border: 1px solid orange;
+  }
+  .content{
+   display: grid;
+   height: 232px;
+   grid-template-columns: auto auto auto auto auto auto;
+  gap: 24px;
+  padding: 40px;
+  justify-content: space-between;
+  margin-top: 30px;
+  /* margin-bottom: 70px; */
+  
+  }
+  .content .item-container{
+    width: 205px;
+height: 232px;
+padding: 24px 31px;
+border-radius: 16px;
+border: 2px solid #C1C1C1
+
+  }
+  .item-container .item-card{
+    width: 143px;
+height: 184px;
+gap: 16px;
+display: flex;
+flex-direction: column;
+  }
+  .item-card  .img-item{
+width: 143px;
+height: 100px;
+padding: 10px 32px 9px 30px;
+border-radius: 16px;
+background: #F2F2F2;
+  }
+  .img-item img{
+width: 81px;
+height: 81px;
+top: 10px;
+left: 30px;
+}
+.item-card .item-description{
+    width: 100%;
+height: 68px;
+gap: 8px;
+display: flex;
+flex-direction: column;
+}
+.item-description h4{
+    width:100%;
+height: 36px;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: center;
+color: #1E1E1E;
+
+}
+.item-description p{
+    width: 100%;
+height: 24px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #808080;
+}
+.see-more button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 164px;
+    position: absolute;
+height: 32px;
+top: 2250px;
+left: 760px;
+padding: 4px 8px 4px 8px;
+gap: 0;
+border-radius: 8px;
+/* opacity: 0.8px; */
+background: #882BECF2;
+/* margin-top: -20px; */
+
+}
+button p{
+    width: 77px;
+height: 24px;
+gap: 0px;
+opacity: 0px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #FFFFFF;
+
+}
+button img{
+   width: 33px;
+height: 20px;
+gap: 0px;
+border-radius: 0.5px 0px 0px 0px;
+
+
+}
