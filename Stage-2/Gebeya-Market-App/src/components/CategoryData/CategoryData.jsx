@@ -19,6 +19,11 @@ import { useState } from "react";
 import triple_arrow from "../../assets/triple_arrow.png";
 import arrow1 from "../../assets/arrow1.png";
 import arrow2 from "../../assets/arrow2.png";
+// import black_tishert from "../../assets/black_tishert.png";
+import yellow_dress from "../../assets/yellow_dress.png";
+import nail_ink from "../../assets/nail_ink.png";
+
+// import layout from "../../assets/layout.png";
 
 
 
@@ -93,6 +98,28 @@ const categories = {
     },
   ],
 };
+const BrowseCategory = [
+  {
+    title: "Casual wear",
+    description: "Over 20 categories in stock",
+    image: black_tishert, 
+  },
+  {
+    title: "Vintage",
+    description: "Over 31 categories in stock",
+    image: yellow_dress
+  },
+  {
+    title: "Beauty products",
+    description: "Over 24 categories in stock",
+    image: nail_ink
+  },
+  {
+    title: "Gym wears",
+    description: "Over 62 categories in stock",
+    image: packout
+  },
+];
 
 const CategoryData = () => {
   const [activeCategory, setActiveCategory] = useState("Women");
@@ -136,8 +163,44 @@ const CategoryData = () => {
           <p>See more</p> <img src={triple_arrow} alt="" />
         </button>
       </div>
+
+      {/* Layout section */}
+      {/* <div className="layout-container">
+        <h1>hey</h1>
+        <img
+          src={layout}
+          alt=""
+          className="layout-img border-3 object-contain;"
+        />
+      </div> */}
+
+      <div className="curated-summer-collection">
+        <div className="text-content">
+          <h1>Our Curated Summer Collection</h1>
+          <p>
+            Explore our curated summer collection featuring trending styles,
+            vibrant colors, and lightweight fabrics perfect for long days and
+            nights.
+          </p>
+          <button className="explore-button">Explore Now</button>
+        </div>
+
+        {/* Circles in the Middle */}
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div className="absolute w-[22px] h-[22px] top-[352px] left-[430px] bg-[#882BEC7D] rounded-full"></div>
+          <div className="absolute w-[22px] h-[22px] top-[38px] left-[599px] bg-[#FFD700] rounded-full"></div>
+          <div className="absolute w-[40px] h-[40px] top-[439px] left-[500px] bg-[#A35CF0] rounded-full"></div>
+          <div className="absolute w-[40px] h-[40px] top-[144px] left-[689px] bg-[#A35CF0] rounded-full"></div>
+          <div className="absolute w-[58px] h-[58px] top-[331px] left-[680px] bg-[#FFD700] rounded-full"></div>
+          <div className="absolute w-[22px] h-[22px] top-[457px] left-[605px] bg-[#882BEC7D] rounded-full"></div>
+          <div className="absolute w-[40px] h-[40px] top-[100px] left-[896px] bg-[#A35CF0] rounded-full"></div>
+          <div className="absolute w-[40px] h-[40px] top-[251px] left-[776px] bg-[#CAD3B8] rounded-full"></div>
+          <div className="absolute w-[40px] h-[40px] top-[40px] left-[796px] bg-[#CAD3B8] rounded-full"></div>
+        </div>
+      </div>
+
       {/* {Browse by category} */}
-      <div className="product-category flex relative justify-between mt-[50px] p-[20px] top-[3163px]">
+      <div className="product-category flex  justify-between mt-[50px] p-[20px] top-[630px] left-[3px]">
         <h2 className="latest w-388  left-80 font-poppins text-2xl font-semibold font-normal antialiased tracking-wider leading-60">
           Browse by category
         </h2>
@@ -145,6 +208,24 @@ const CategoryData = () => {
           <img src={arrow1} alt="" className="w-8 h-8 cursor-pointer" />
           <img src={arrow2} alt="" className="w-8 h-8 cursor-pointer" />
         </div>
+      </div>
+
+      <div className="category-container">
+        {BrowseCategory.map((category, index) => (
+          <div className="category-card" key={index}>
+            <div className="category-img" >
+              <img
+                src={category.image}
+                alt={category.title}
+                className="category-image"
+              />
+            </div>
+            <div className="category-discription" >
+              <h3 className="category-title">{category.title}</h3>
+              <p className="category-description">{category.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

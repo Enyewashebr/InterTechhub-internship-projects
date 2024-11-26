@@ -1,0 +1,132 @@
+.footer {
+    
+    width: full;
+  /* overflow-x: hidden; */
+    /* position: fixed; */
+  background-color: #a259ff;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+.footer .footer-container {
+    /* position: relative; */
+    width: 100%;
+height: 413px;
+top: 3847px;
+gap: 0px;
+opacity: 0px;
+background-color: #a259ff;
+  display: flex;
+  /* flex-direction: ; */
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container .footer-bottom{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    /* max-width: 1200px; */
+    /* border-top: 1px solid white; */
+    /* padding-top: 20px; */
+    margin-left: 70px;
+
+}
+.footer-bottom .footer-logo svg{
+    width: 100%;
+height: 230px;
+top: 73px;
+left: 80px;
+padding: 30.02px 7.98px 30.02px 7.98px;
+gap: 0px;
+opacity: 0px;
+
+}
+.footer-bottom .footer-icons{
+    width: 160px;
+height: 32px;
+top: 327px;
+left: 115px;
+gap: 32px;
+opacity: 0px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+
+}
+.footer-icons i{
+    width: 32px;
+height: 32px;
+padding: 3.51px 3.5px 3.51px 3.51px;
+
+}
+.footer-container .footer-desktop{
+    width: 147px;
+height: 174px;
+top: 101px;
+position: absolute;
+gap: 20px;
+opacity: 0px;
+left:911px;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+.footer-desktop h4{
+
+    width: 147px;
+height: 42px;
+gap: 0px;
+opacity: 0px;
+width: 147px;
+height: 42px;
+gap: 0px;
+opacity: 0px;
+color: #ffffff;
+font-family: Poppins;
+font-size: 28px;
+font-weight: 700;
+line-height: 42px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.footer-desktop ul{
+width: 147px;
+height: 124px;
+gap: 8px;
+opacity: 0px;
+
+}
+.footer-desktop ul li{
+    width: 147px;
+height: 36px;
+gap: 0px;
+opacity: 0px;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 400;
+line-height: 36px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+@media (max-width: 768px) {
+  .footer-desktop {
+    /* display: none; */
+  }
+  .footer-mobile {
+    display: block;
+  }
+  .footer-bottom{
+    display: hidden;
+    background-color: blue;
+  }
+}
