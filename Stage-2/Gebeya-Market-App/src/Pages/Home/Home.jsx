@@ -19,10 +19,13 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center Z-0 overflow-x-hidden">
+      <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center Z-0 overflow-x-hidden ">
         <div className="left-div  block  justify-center items-center p-[15px] flex-1  ml-[60px] mt-[50px] ml-[90px]">
           <h1 className=" w-[497px] h-[175px] top-[193px] left-[80px] font-alfa-slab text-[128px]  leading-[175.23px] text-white text-bold font-Anton-Regular mb-[30px] mt-[50px] ml-[30px]">
             Gebeya
+          </h1>
+          <h1 className=" w-[125px] h-[44px] top-[150px] left-[24px] font-alfa-slab text-[128px]  leading-[175.23px] text-white text-bold font-400 mb-[30px] mt-[50px] ml-[30px] lg:hidden">
+            TIMBU
           </h1>
           <img
             src={home_img2}

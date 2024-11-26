@@ -2,7 +2,7 @@
 .navbar{
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: white;
@@ -310,5 +310,154 @@ opacity: 0px;
 background-color: red;
 border-radius: 50%;
 position: absolute;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  margin: 0;
+  padding: 0;
+
+  height: fit-content;
+  left: 0;
+  /* background-color: rgb(153, 31, 31); */
+}
+
+  .navbar .nav-container {
+    display: none;
+  }
+ .navbar2{
+/* margin: auto; */
+  /* position: absolute; */
+  width: 382px;
+height: 32px;
+margin-top: 13px;
+left: 24px;
+right: 24px;
+gap: 24px;
+opacity: 0px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: space-between;
+/* background-color: red; */
+ }
+ .navbar2 .navbar-left{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 24px;
+ }
+ .navbar-left .menu-icon{
+  width: 24px;
+height: 24px;
+gap: 0px;
+opacity: 0px;
+cursor: pointer;
+ }
+ .navbar2 .sidebar-menu{
+  position: absolute;
+  width: 207px;
+height: 392px;
+top:47px;
+gap: 0px;
+opacity: 0px;
+
+background-color: red;
+
+ }
+ .navbar-left .menu-icon:active, .sidebar-menu{
+  display: block;
+
+ }
+ .navbar-left .logo-img{
+  width: 32px;
+height: 32px;
+cursor: pointer;
+}
+.navbar2 .navbar-center{
+  display: flex;
+  width: 230px;
+height: 32px;
+padding: 4px 16px 4px 16px;
+gap: 8px;
+border-radius: 24px;
+opacity: 0px;
+border: 1px solid #C6C6C6;
+}
+.navbar-center .search-icon{
+  width: 13.33px;
+height: 13.33px;
+top: 1.33px;
+left: 14.67px;
+gap: 0px;
+/* border: 1.5px solid #222222; */
+opacity: 0px;
+
+
+}
+.navbar-center .search-input{
+  width: 53px;
+height: 18px;
+gap: 0px;
+opacity: 0px;
+font-family: Poppins;
+font-size: 12px;
+font-weight: 300;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #808080;
+
+}
+.navbar2 .navbar-right{
+  width: 24px;
+height: 24px;
+gap: 0px;
+border-radius: 100px;
+opacity: 0px;
+background-color: #222222;
+} 
+}
+.navbar2 .sidebar-menu{
+width: 207px;
+height: 392px;
+top: 47px;
+gap: 0px;
+opacity: 0px;
+/* position: relative; */
+
+background-color: #FFFFFF;
+}
+.sidebar-menu .xlogo{
+  width: 88px;
+height: 32px;
+top: 6px;
+left: 24px;
+gap: 0px;
+justify-content: space-between;
+opacity: 0px;
+display: flex;
 
 }

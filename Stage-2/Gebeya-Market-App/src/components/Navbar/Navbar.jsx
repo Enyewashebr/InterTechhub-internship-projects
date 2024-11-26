@@ -1,4 +1,4 @@
-// import React from 'react';
+import { useState } from 'react';
 import "./Navbar.css";
 
 import logo from "/logo.png";
@@ -8,12 +8,17 @@ import search from "../../assets/search.png";
 import bag from "../../assets/bag.png";
 import flag from "../../assets/uk-flag.png";
 import search2 from '../../assets/search2.png'
-
-
+import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
+//FaShoppingCart, FaSearch, FaTimes 
 
 
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   const moreMenu = [
     {to: "/perfumes", text: "Perfumes"},
     {to: "/Jewelries", text: "Jewelries"},
@@ -26,14 +31,94 @@ const Navbar = () => {
   ]
   return (
     <>
-      <div className="navbar">
-        <div className="nav-container">
-          <img src={logo} alt="Logo" className="logo-img" />
+      <div className="navbar ">
+        <div className="navbar2 lg:hidden md:hiddden">
+          <div className="navbar-left">
+            <FaBars className="menu-icon" onClick={toggleMenu} />
+
+            <div className="logo">
+              <img src={logo} alt="Logo " className="logo-img w-32px h-32px" />
+            </div>
+          </div>
+          <div className="navbar-center">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search....."
+            />
+          </div>
+          <div className="navbar-right">
+            {/* <FaShoppingCart className="cart-icon" /> */}
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="24" rx="12" fill="#222222" />
+              <path
+                d="M9 9.11334V8.46667C9 6.96667 10.2067 5.49334 11.7067 5.35334C13.4933 5.18001 15 6.58667 15 8.34001V9.26001"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9.99988 18.6667H13.9999C16.6799 18.6667 17.1599 17.5933 17.2999 16.2867L17.7999 12.2867C17.9799 10.66 17.5132 9.33333 14.6666 9.33333H9.33322C6.48655 9.33333 6.01988 10.66 6.19988 12.2867L6.69988 16.2867C6.83988 17.5933 7.31988 18.6667 9.99988 18.6667Z"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M14.3302 12H14.3361"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9.66317 12H9.66916"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div className={`sidebar-menu  ${menuOpen ? "open" : ""}`}>
+            <div className="Xlogo">
+              <FaTimes className="close-icon" onClick={toggleMenu} />
+              <img src={logo} alt="Logo " className="logo-img w-32px h-32px" />
+            </div>
+
+            <ul>
+              <li>Register/Sign up</li>
+              <li>Our Categories</li>
+              <ul>
+                <li>Men</li>
+                <li>Women</li>
+                <li>Kids</li>
+                <li>Accessories</li>
+                <li>More</li>
+              </ul>
+              <li>EN/Currency</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="nav-container flex space-between sm:hidden">
+          {/* Logo Section */}
+          <img src={logo} alt="Logo " className="logo-img" />
 
           {/* Register/Sign In Section */}
 
           {/* Category Links */}
-          <div className="category">
+          <div className="category ">
             <div className="profile-container">
               <div className="profile">
                 <img src={profile} alt="Profile" className="profile-img" />
@@ -95,15 +180,25 @@ const Navbar = () => {
                 placeholder="Search"
                 className="search-input"
               />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="search-input"
+              />
+              {/* <input
+                type="text"
+                placeholder="Search..."
+                className="search-input lg:hidden md:hidden xl:hidden"
+              /> */}
             </div>
 
             <button type="submit">
-              <img src={search2} alt="" className="search-icon" />
+              <img src={search2} alt="" className="search-icon " />
             </button>
           </div>
 
           {/* Currency Section */}
-          <div className="currency-change flex items-center gap-2">
+          <div className="currency-change flex items-center gap-2 sm:hidden">
             <img src={flag} alt="" className="flag-img" />
             <h2>EN/Currency</h2>
             <img src={dropdown} alt="Dropdown" className="currency-drop " />

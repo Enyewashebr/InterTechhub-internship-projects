@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         {/* Desktop View */}
-        <div className="footer-bottom">
+        <div className="footer-bottom sm:hidden">
           <div className="footer-logo">
             <svg
               width="230"
@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
 
         {/* Mobile View */}
-        <div className="footer-mobile ">
+        <div className="footer-mobile block space-between flex-col lg:hidden">
           <div className="footer-section">
             <div className="droped flex space-between">
               <h4>About</h4>
@@ -142,9 +142,9 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <div className="droped flex space-between">
-              <h4>About</h4>
+              <h4>Products</h4>
               <svg
-                onClick={() => setAboutOpen(!isAboutOpen)}
+                onClick={() => setProductsOpen(!isProductsOpen)}
                 width="14"
                 height="8"
                 viewBox="0 0 14 8"
@@ -170,9 +170,9 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <div className="droped flex space-between">
-              <h4>About</h4>
+              <h4>Discover</h4>
               <svg
-                onClick={() => setAboutOpen(!isAboutOpen)}
+                onClick={() => setDiscoverOpen(!isDiscoverOpen)}
                 width="14"
                 height="8"
                 viewBox="0 0 14 8"
@@ -182,13 +182,13 @@ const Footer = () => {
                 <path
                   d="M1 1L6.29289 6.29289C6.62623 6.62623 6.79289 6.79289 7 6.79289C7.20711 6.79289 7.37377 6.62623 7.70711 6.29289L13 1"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-            {isDiscoverOpen && (
+            {isProductsOpen && (
               <ul>
                 <li>Contact Us</li>
                 <li>Customers</li>
@@ -197,8 +197,8 @@ const Footer = () => {
             )}
           </div>
         </div>
-        <div className="footer-bottom-2 sm:hidden bg-red-500">
-          <div className="footer-logo">
+        {/* <div className="footer-bottom-mobile w-full">
+          <div className="footer-logo-mobile flex justify-center">
             <svg
               width="230"
               height="230"
@@ -216,7 +216,7 @@ const Footer = () => {
               />
             </svg>
           </div>
-          <div className="footer-icons">
+          <div className="footer-icons flex justify-center">
             <i className="icon-instagram">
               <svg
                 width="32"
@@ -266,11 +266,11 @@ const Footer = () => {
                 />
               </svg>
             </i>
-          </div>
+          </div> */}
         </div>
 
         {/* Footer Bottom */}
-      </div>
+      
     </footer>
   );
 };

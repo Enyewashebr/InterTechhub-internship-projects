@@ -125,8 +125,8 @@ text-decoration-skip-ink: none;
   .footer-mobile {
     display: block;
   }
-  .footer-bottom{
-    display: hidden;
+  .footer-container .footer-bottom{
+    display:none;
     background-color: blue;
   }
 }
