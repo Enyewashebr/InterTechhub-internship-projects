@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar ">
-        <div className="navbar2 lg:hidden md:hiddden">
+        <div className="navbar2 lg:hidden md:hiddden ">
           <div className="navbar-left">
             <FaBars className="menu-icon" onClick={toggleMenu} />
 
@@ -91,23 +91,41 @@ const Navbar = () => {
             </svg>
           </div>
           <div className={`sidebar-menu  ${menuOpen ? "open" : ""}`}>
-            <div className="Xlogo">
-              <FaTimes className="close-icon" onClick={toggleMenu} />
-              <img src={logo} alt="Logo " className="logo-img w-32px h-32px" />
+            <div className="xlogo flex ">
+              <div className="close ">
+                <FaTimes
+                  className="close-icon item-center align-center"
+                  onClick={toggleMenu}
+                />
+              </div>
+              <div className="lgo  ">
+                <img src={logo} alt="Logo " className="logo-img  " />
+              </div>
             </div>
-
-            <ul>
-              <li>Register/Sign up</li>
-              <li>Our Categories</li>
-              <ul>
-                <li>Men</li>
-                <li>Women</li>
-                <li>Kids</li>
-                <li>Accessories</li>
-                <li>More</li>
-              </ul>
-              <li>EN/Currency</li>
-            </ul>
+            <div className="nav-list h-full gap-10 items-left flex flex-col ">
+              <div className="rigister w-full  ">
+                <h3 className="h-20">Register/Sign up &gt;</h3>
+              </div>
+              <div className="our-category absolute">
+                <h3>Our Categories</h3>
+                <ul>
+                  <li>Men</li>
+                  <li>Women</li>
+                  <li>Kids</li>
+                  <li>Accessories</li>
+                  <li>More &gt;</li>
+                </ul>
+              </div>
+              <hr className="w-full  absolute bg-red-500" height="3px" />
+              <div className="nav-currency relative flex flex-row">
+                <img
+                  src={flag}
+                  alt=""
+                  className="flag-img w-20px h-20px rounded-full align-left"
+                />
+                <h3 className='cursor-pointer'>EN/Currency &gt;</h3>
+              </div>
+            </div>
           </div>
         </div>
 
