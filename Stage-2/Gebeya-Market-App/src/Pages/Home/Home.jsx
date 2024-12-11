@@ -7,7 +7,8 @@ import home_img3 from "../../assets/home_img3.png"
 
 import Footer from "../../components/Footer/Footer"
 
-import ProductList from "../../components/ProductList/ProductList"
+// import ProductList from "../../components/ProductList/ProductList"
+import ProductList from '../../components/ProductList/ProductList'
 import arrow1 from "../../assets/arrow1.png";
 import arrow2 from "../../assets/arrow2.png";
 import CategoryData from '../../components/CategoryData/CategoryData'

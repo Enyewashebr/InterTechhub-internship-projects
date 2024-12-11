@@ -1,10 +1,20 @@
-// import React from "react";
-import ProductCard from "../ProductCard/ProductCard";
-import "./ProductList.css";
+import ProductCard from '../ProductCard/ProductCard';
 import bag2 from "../../assets/bag2.png";
 import dress from "../../assets/dress.png";
 import shoes from "../../assets/shoes.png";
-import PropTypes from "prop-types";
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+import { Pagination} from "swiper/modules";
+import "./ProductList.css";
+
+
+
+
+
+
 
 
 
@@ -26,7 +36,7 @@ const products = [
     category: "Kids",
   },
   {
-    image:dress,
+    image: dress,
     name: "Alvero Gown",
     brand: "DIVINE",
     price: 300,
@@ -35,30 +45,60 @@ const products = [
   },
 ];
 const ProductList = () => {
-  return (
-    <>
-      <div className="product-list ">
-        {products.map((product, index) => (
-          <ProductCard key={index} {...product} />
-        ))}
-      </div>
-    </>
-  );
+const [isMobile, setIsMobile] = useState(false);
+
+// Detect screen width on mount and resize
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 480); // Adjust breakpoint as needed
+  };
+
+  handleResize(); // Check on mount
+  window.addEventListener("resize", handleResize); // Listen for changes
+
+  return () => {
+    window.removeEventListener("resize", handleResize); // Cleanup on unmount
+  };
+}, []);
+
+
+
+
+return (
+  <>
+    <div className="product-list ">
+      {isMobile ? (
+        // Mobile: Swiper slider
+        <Swiper
+          slidesPerView={1.2} // Slightly showing the next slide
+          spaceBetween={8}
+          loop={true}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Pagination]}
+          className="mySwiper  "
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <ProductCard {...product} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        products.map((product, index) => (
+          <ProductCard
+            key={index}
+            image={product.image}
+            name={product.name}
+            brand={product.brand}
+            price={product.price}
+            rating={product.rating}
+            category={product.category}
+          />
+        ))
+      )}
+    </div>
+  </>
+);
 };
-
-
-ProductList.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      brand: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      rating: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    })
-  ),
-};
-
-
 export default ProductList;

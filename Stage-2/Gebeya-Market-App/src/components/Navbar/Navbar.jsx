@@ -15,10 +15,14 @@ import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  // const toggleHover = () => {
+  //   setHovered(!hovered);
+  // }
   const moreMenu = [
     {to: "/perfumes", text: "Perfumes"},
     {to: "/Jewelries", text: "Jewelries"},
@@ -123,7 +127,7 @@ const Navbar = () => {
                   alt=""
                   className="flag-img w-20px h-20px rounded-full align-left"
                 />
-                <h3 className='cursor-pointer'>EN/Currency &gt;</h3>
+                <h3 className="cursor-pointer">EN/Currency &gt;</h3>
               </div>
             </div>
           </div>
@@ -173,18 +177,36 @@ const Navbar = () => {
               Accessories
             </div>
 
-            <div className="more-categories">
+            <div
+              className="more-categories"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
               <div className="more-container">
                 <h2 className="more">More</h2>
-                <img src={dropdown} alt="" className="more-drop" />
+                <img
+                  src={dropdown}
+                  alt=""
+                  className={`more-drop cursor-pointer ${
+                    hovered ? "rotated" : ""
+                  }`}
+                  onMouseEnter={() => setHovered(true)}
+                  onMouseLeave={() => setHovered(false)}
+                />
               </div>
-              <div className="drop-lists">
-                {moreMenu.map(({ to, text }, index) => (
-                  <a key={index} href={to} className="list">
-                    {text} <hr />
-                  </a>
-                ))}
-              </div>
+              {hovered && (
+                <div
+                  className="drop-lists"
+                  onMouseEnter={() => setHovered(true)}
+                  onMouseLeave={() => setHovered(false)}
+                >
+                  {moreMenu.map(({ to, text }, index) => (
+                    <a key={index} href={to} className="list">
+                      {text} <hr />
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -201,7 +223,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="search-input"
+                className="search-input lg:hidden md:hidden xl:hidden"
               />
               {/* <input
                 type="text"

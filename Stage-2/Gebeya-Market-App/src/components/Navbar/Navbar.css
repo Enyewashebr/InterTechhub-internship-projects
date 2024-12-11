@@ -135,12 +135,13 @@ border: 1px solid #C1C1C1
     width: 194px;
     height: 280px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: none;
-    top: 79px;
+    display: block;
+    top: 56px;
     position: absolute;
-    left: 691px;
+    left: 791px;
     background-color: white;
     z-index: 10;
+    /* margin-top: 8px; */
     border-radius: 4px;
     /* display: ; */
 }
@@ -166,14 +167,19 @@ border: 1px solid #C1C1C1
 }
 
 /* Hover effects for container and dropdown */
-.more-drop:hover, .more-container:hover, .drop-lists {
-    display:block;
-    opacity: 100%;
+/* .more-drop:open, .more-container:hover, .drop-lists {
+    /* display:block; */
+    /* opacity: 100%; */
+/* } */
+.more-categories:hover .more-drop:hover .drop-lists{ 
+    display: block;
 }
-
 .more-drop:hover {
-    transform: rotate(180deg); /* Rotate the icon on hover of the container */
-}
+    transform: rotate(180deg);  
+} 
+/* .more-drop.open .drop-lists{
+  display:block;
+} */
 .nav-container .search-box {
  width: 275px;
 height: 40px;
@@ -353,6 +359,7 @@ height: 32px;
 margin-top: 13px;
 left: 24px;
 right: 24px;
+
 gap: 24px;
 opacity: 0px;
 display: flex;
@@ -448,6 +455,7 @@ width: 207px;
 position: absolute;
 height: 392px;
 top: 11px;
+border: 1px solid #C9C9C9;
 gap: 15px;
 opacity: 0px;
 display: flex;
@@ -605,4 +613,9 @@ align-items: center;
 border-top: 3px solid #C9C9C9;
 
  }
+}
+@media (min-width: 481px) {
+  .navbar2{
+    display: none;
+}
 }

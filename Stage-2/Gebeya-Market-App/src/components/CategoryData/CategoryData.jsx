@@ -102,22 +102,27 @@ const BrowseCategory = [
   {
     title: "Casual wear",
     description: "Over 20 categories in stock",
-    image: black_tishert, 
+    image: black_tishert,
   },
   {
     title: "Vintage",
     description: "Over 31 categories in stock",
-    image: yellow_dress
+    image: yellow_dress,
   },
   {
     title: "Beauty products",
     description: "Over 24 categories in stock",
-    image: nail_ink
+    image: nail_ink,
   },
   {
     title: "Gym wears",
     description: "Over 62 categories in stock",
-    image: packout
+    image: packout,
+  },
+  {
+    title: "Casual wear",
+    description: "Over 20 categories in stock",
+    image: black_tishert,
   },
 ];
 
@@ -164,17 +169,8 @@ const CategoryData = () => {
         </button>
       </div>
 
-      {/* Layout section */}
-      {/* <div className="layout-container">
-        <h1>hey</h1>
-        <img
-          src={layout}
-          alt=""
-          className="layout-img border-3 object-contain;"
-        />
-      </div> */}
-
-      <div className="curated-summer-collection">
+      
+      <div className="curated-summer-collection relative">
         <div className="text-content">
           <h1>Our Curated Summer Collection</h1>
           <p>

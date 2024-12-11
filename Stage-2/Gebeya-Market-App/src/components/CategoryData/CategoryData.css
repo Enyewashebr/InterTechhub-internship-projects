@@ -139,7 +139,7 @@ border-radius: 0.5px 0px 0px 0px;
 .category-data .curated-summer-collection {
   width: 100%;
 height: 502px;
-top: 700px;
+top: 40px;
 /* left: 64px; */
 gap: 0px;
 display: flex;
@@ -149,7 +149,7 @@ border-radius: 24px;
 opacity: 0px;
 background: #D0D0D0;
 /* position: absolute; */
-margin-top: 120px;
+margin-top: 0px;
 
  background-image: url('../../assets/layout.png');
     background-size: cover; /* Ensures the image covers the entire background */
@@ -230,21 +230,22 @@ text-align: center;
 .category-data .category-container{
        width: full;
        /* position: absolute; */
-gap: 24px;
-padding: 44px;
+gap: 30px;
+padding: 34px;
 align-items: center;
 justify-content: center;
-margin: 40px;
+margin: 30px;
 top: 1500px;
 /* background-color: red; */
 display: grid;
-grid-template-columns: auto auto auto auto;
+grid-template-columns: auto auto auto auto auto;
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 }
 .category-container .category-card{
-  width: 320px;
+  width: 305px;
 height:400px;
 display: flex;
+gap: 15px;
 flex-direction: column;
 }
 .category-card .category-img{

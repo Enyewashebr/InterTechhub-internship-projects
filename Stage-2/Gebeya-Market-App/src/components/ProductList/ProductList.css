@@ -1,6 +1,24 @@
-.product-list {
-  display: flex;
-  padding: 40px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* Style the pagination container */
+.mySwiper .swiper-pagination {
+  bottom: 10px; /* Adjust positioning */
+  text-align: center; /* Center alignment */
 }
+
+/* Style individual pagination bullets */
+.mySwiper .swiper-pagination-bullet {
+  width: 1px;
+  height: 12px;
+  /* background-color: #dddddd; */
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin: 0 5px; /* Space between bullets */
+}
+
+/* Highlight the active bullet */
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #ffa500; /* Highlight active dot */
+  opacity: 1;
+  transform: scale(1.2); /* Slightly enlarge */
+}
+
