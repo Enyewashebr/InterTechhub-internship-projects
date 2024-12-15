@@ -4,9 +4,9 @@ import dress from "../../assets/dress.png";
 import shoes from "../../assets/shoes.png";
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Pagination} from "swiper/modules";
 import "./ProductList.css";
 
@@ -47,17 +47,18 @@ const products = [
 const ProductList = () => {
 const [isMobile, setIsMobile] = useState(false);
 
-// Detect screen width on mount and resize
+
 useEffect(() => {
+
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 480); // Adjust breakpoint as needed
+    setIsMobile(window.innerWidth <= 480); 
   };
 
-  handleResize(); // Check on mount
-  window.addEventListener("resize", handleResize); // Listen for changes
+  handleResize(); 
+  window.addEventListener("resize", handleResize);
 
   return () => {
-    window.removeEventListener("resize", handleResize); // Cleanup on unmount
+    window.removeEventListener("resize", handleResize); 
   };
 }, []);
 
@@ -70,17 +71,21 @@ return (
       {isMobile ? (
         // Mobile: Swiper slider
         <Swiper
-          slidesPerView={1.2} // Slightly showing the next slide
-          spaceBetween={8}
+          slidesPerView={1.3} // Slightly showing the next slide
+          spaceBetween={7}
           loop={true}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Pagination]}
-          className="mySwiper  "
+          className="mySwiper  w-[382px]"
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <ProductCard {...product} />
+              <ProductCard
+                {...product}
+                
+                
+              />
             </SwiperSlide>
           ))}
         </Swiper>

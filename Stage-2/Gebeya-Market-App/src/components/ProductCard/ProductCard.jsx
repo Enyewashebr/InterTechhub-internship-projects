@@ -15,12 +15,12 @@ import PropTypes from "prop-types";
 const ProductCard = ({image, name, brand, price, rating, category  })=>{
   return (
     <>
-      <div className="product-card sm:w-[282px] sm:h-[296px] sm:gap-[16px] sm:flex sm:flex-col
-      " >
-        <div className="product-card-upper sm:w-[266px] sm:h-[167px]">
-          <div className="product-card-header sm:h-[136px]  sm:rounded-[8px]">
-            <button className="favorite-btn sm:w-[24px] sm:h-[24px] sm:rounded-[100px] ">♡</button>
-            <img src={image} alt={name} className="product-image sm:w-[124px] sm:h-[141px]" />
+      <div className="product-card  sm:relative sm:!w-[282px] sm:h-[296px]
+      sm:left-[4px] sm:!Z-50" >
+        <div className="product-card-upper sm:w-[266px] sm:h-[167px]  sm:gap-8">
+          <div className="product-card-header sm:w-[266px] sm:h-[136px] sm:rounded-[8px]">
+            <button className="favorite-btn  sm:absolute">♡</button>
+            <img src={image} alt={name} className="product-image sm:w-[124px] sm:h-[141px sm:absolute" />
             <span className="in-stock">In Stock</span>
           </div>
           <div className="rate-category">

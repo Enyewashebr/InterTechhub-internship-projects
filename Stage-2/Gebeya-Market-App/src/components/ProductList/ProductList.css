@@ -1,24 +1,35 @@
+/* Style the Swiper container */
+.mySwiper {
+  position: relative; /* Ensures pagination can be positioned absolutely */
+  padding-bottom: 40px; /* Adds space below for pagination */
+}
+
 /* Style the pagination container */
-.mySwiper .swiper-pagination {
-  bottom: 10px; /* Adjust positioning */
-  text-align: center; /* Center alignment */
+.swiper-pagination {
+  position: absolute; /* Positions pagination inside the Swiper container */
+  bottom: 10px; /* Positions the pagination at the bottom */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the pagination bullets */
+  text-align: center;
+  z-index: 10; /* Ensures pagination appears above other content */
 }
 
 /* Style individual pagination bullets */
-.mySwiper .swiper-pagination-bullet {
-  width: 1px;
-  height: 12px;
-  /* background-color: #dddddd; */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
   opacity: 0.6;
   border-radius: 50%;
   transition: all 0.3s ease;
-  margin: 0 5px; /* Space between bullets */
+  margin: 0 5px; /* Adds spacing between bullets */
 }
 
-/* Highlight the active bullet */
-.mySwiper .swiper-pagination-bullet-active {
-  background-color: #ffa500; /* Highlight active dot */
+/* Style the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #00ffc8; /* Active bullet color */
   opacity: 1;
-  transform: scale(1.2); /* Slightly enlarge */
+  transform: scale(1.2); /* Slightly enlarges the active bullet */
 }
-
