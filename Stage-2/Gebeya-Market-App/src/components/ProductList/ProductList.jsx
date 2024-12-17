@@ -77,7 +77,7 @@ return (
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Pagination]}
-          className="mySwiper  w-[382px]"
+          className="mySwiper  w-full z-50 overflow-y-hidden"
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>

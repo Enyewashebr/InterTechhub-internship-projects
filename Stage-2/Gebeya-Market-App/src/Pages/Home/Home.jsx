@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10 justify-between p-[10px]  justify-center Z-0 overflow-x-hidden sm:w-full sm:h-[373px] sm:top-[0px] sm:relative  sm:gap-0">
-        <div className="left-div  block  justify-center items-center p-[15px] flex-1  ml-[60px] mt-[50px] ml-[90px] sm:align-left sm:ml-[0px] sm:h-[68px] ">
+      <div className="home-container w-full h-[769px] mt-[90px]  bg-[#882BEC] flex gap-10  p-[10px]  justify-center Z-0 overflow-x-hidden sm:w-full sm:h-[373px] sm:top-[0px] sm:relative  sm:gap-0">
+        <div className="left-div  block  justify-center items-center p-[15px] flex-1  mt-[50px] ml-[90px] sm:align-left sm:ml-[0px] sm:h-[68px] ">
           <h1 className=" w-[497px] h-[175px] top-[193px] left-[80px] font-alfa-slab text-[128px]  leading-[175.23px] text-white text-bold font-Anton-Regular mb-[30px] mt-[50px] ml-[30px] sm:hidden">
             Gebeya
           </h1>
@@ -44,7 +44,7 @@ const Home = () => {
             Discover a world of convenience with our user-friendly platform,
             curaated collections, and exceptional customer service
           </p>
-          <button className="w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px] rounded-[8px] rounded-[8px] font-poppins font-600 text-24  bg-[#FEA301] top-[170px] font-poppins font-500 text-24 sm:w-[382px] sm:absolute sm:top-[300px] sm:h-[44px] sm:text-[12px] sm:rounded-[8px] sm:text-[16px] sm:font-500 sm:leading-[24px] sm:ml-[-158px] sm:mt-[20px] sm:cursor-pointer">
+          <button className="flex justify-center w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px]  font-poppins font-600 text-24  bg-[#FEA301] top-[170px] font-poppins font-500 text-24 sm:w-[382px] sm:absolute sm:top-[300px] sm:h-[44px]  sm:rounded-[8px] sm:text-[16px] sm:font-500 sm:leading-[24px] sm:ml-[-158px] sm:mt-[20px] sm:cursor-pointer">
             Explore Now
           </button>
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
             Discover a world of convenience with our user-friendly platform,
             curaated collections, and exceptional customer service
           </p>
-          <h1 className="w-[390px]  h-[175px] top-[366px] left-[1007px] font-alfa-slab text-[128px] text-white font-Anton-Regular leading-[175.23px]  mt-[30px] pl-[30px]  sm:w-[98px] sm:h-[44px]  sm:text-[32px]   text-white text-bold font-400 sm:top-[-93px] sm:pl-[0px] sm:absolute sm:left-[0px]">
+          <h1 className="w-[390px]  h-[175px] top-[366px] left-[1007px] font-alfa-slab text-[128px] text-white font-Anton-Regular leading-[175.23px]  mt-[30px] pl-[30px]  sm:w-[98px] sm:h-[44px]  sm:text-[32px]    text-bold font-400 sm:top-[-93px] sm:pl-[0px] sm:absolute sm:left-[0px]">
             SHOP
           </h1>
           <img
@@ -64,10 +64,10 @@ const Home = () => {
         </div>
       </div>
       <div className="product-category flex justify-between mt-[50px] p-[20px]">
-        <h2 className="latest w-388  left-80 font-poppins text-2xl font-semibold font-normal antialiased tracking-wider leading-60">
+        <h2 className="latest w-388  left-80 font-poppins text-2xl font-semibold  antialiased tracking-wider leading-60">
           Latest Collections
         </h2>
-        <div className="scroll-side flex gap-8 items-center  ">
+        <div className="scroll-side flex gap-8 items-center  sm:opacity-0 sm:none">
           <img src={arrow1} alt="" className="w-8 h-8 cursor-pointer" />
           <img src={arrow2} alt="" className="w-8 h-8 cursor-pointer" />
         </div>

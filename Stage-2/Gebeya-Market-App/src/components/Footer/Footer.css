@@ -119,9 +119,9 @@ text-decoration-skip-ink: none;
 
 }
 @media (max-width: 768px) {
-  .footer-desktop {
+  /* .footer-desktop {
     /* display: none; */
-  }
+ /* } */
   .footer-mobile {
     display: block;
   }
