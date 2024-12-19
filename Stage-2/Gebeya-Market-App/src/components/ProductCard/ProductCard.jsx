@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 
 const ProductCard = ({ image, name, brand, price, rating, category }) => {
+
+  
+
+
   return (
     <>
       <div className="product-card sm:!z-50 sm:!mr-[-5px]!overflow-hidden sm:relative sm:!w-[282px] sm:h-[350px] sm:left-[4px] sm:!Z-50 smoverflow-visible sm:!container sm:ml-0">

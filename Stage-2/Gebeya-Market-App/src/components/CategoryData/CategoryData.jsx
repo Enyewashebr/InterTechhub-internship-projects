@@ -23,8 +23,14 @@ import arrow2 from "../../assets/arrow2.png";
 import yellow_dress from "../../assets/yellow_dress.png";
 import nail_ink from "../../assets/nail_ink.png";
 
-// import layout from "../../assets/layout.png";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "../ProductList/ProductList.css";
 
+
+
+// import layout from "../../assets/layout.png";
+// import { useNavigate } from "react-router-dom";
 
 
 
@@ -127,22 +133,40 @@ const BrowseCategory = [
 ];
 
 const CategoryData = () => {
+
+
+
+
+
+
   const [activeCategory, setActiveCategory] = useState("Women");
 const [isDropdown, setIsDropdown] = useState(window.innerWidth < 480);
 
+
   // Function to handle screen resizing
+
+
+   
+
+   
+
   const handleResize = () => {
     setIsDropdown(window.innerWidth < 480);
   };
 
   // Add event listener for screen resize
   useEffect(() => {
+    
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {window.removeEventListener("resize", handleResize);
+      
+    }
   }, []);
+
+  
   return (
-    <div className="category-data flex flex-col ">
-      <div className="catagories flex justify-between sm:!w-full sm:relative items-center ">
+    <div className="category-data flex flex-col w-full  sm:!w-full   ">
+      <div className="catagories flex justify-between sm:!w-full sm:relative items-center sm:!overflow-y-hidden">
         {isDropdown ? (
           /** Render dropdown if screen width is below 480px */
           <select
@@ -178,7 +202,7 @@ const [isDropdown, setIsDropdown] = useState(window.innerWidth < 480);
       </div>
 
       {/* Content */}
-      <div className="content sm:!grid sm:!w-full sm:!grid-cols-2">
+      <div className="content sm:!grid sm:!w-full sm:!grid-cols-2 ">
         {categories[activeCategory].map((item, index) => (
           <div
             key={index}
@@ -232,9 +256,9 @@ const [isDropdown, setIsDropdown] = useState(window.innerWidth < 480);
         </div>
 
         {/* Circles in the Middle */}
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="absolute w-[22px] h-[22px] top-[352px] left-[430px] bg-[#882BEC7D] rounded-full"></div>
-          <div className="absolute w-[22px] h-[22px] top-[38px] left-[599px] bg-[#FFD700] rounded-full"></div>
+        <div className="absolute inset-0 flex justify-center items-center sm:absolute sm:hidden">
+          <div className="absolute w-[22px] h-[22px] top-[352px] left-[430px] bg-[#882BEC7D] rounded-full sm:top-[54px] "></div>
+          <div className="absolute w-[22px] h-[22px] top-[38px] left-[599px] bg-[#FFD700] rounded-full "></div>
           <div className="absolute w-[40px] h-[40px] top-[439px] left-[500px] bg-[#A35CF0] rounded-full"></div>
           <div className="absolute w-[40px] h-[40px] top-[144px] left-[689px] bg-[#A35CF0] rounded-full"></div>
           <div className="absolute w-[58px] h-[58px] top-[331px] left-[680px] bg-[#FFD700] rounded-full"></div>
@@ -246,29 +270,36 @@ const [isDropdown, setIsDropdown] = useState(window.innerWidth < 480);
       </div>
 
       {/* {Browse by category} */}
-      <div className="product-category flex  justify-between mt-[50px] p-[20px] top-[630px] left-[3px]">
+      <div className="product-category flex  justify-between mt-[50px] p-[20px] top-[630px] left-[0px] ">
         <h2 className="latest w-388  left-80 font-poppins text-2xl font-semibold  antialiased tracking-wider leading-60">
           Browse by category
         </h2>
-        <div className="scroll-side flex gap-8 items-center  ">
+        <div className="scroll-side flex gap-8 items-center  sm:hidden">
           <img src={arrow1} alt="" className="w-8 h-8 cursor-pointer" />
           <img src={arrow2} alt="" className="w-8 h-8 cursor-pointer" />
         </div>
       </div>
 
-      <div className="category-container">
+      <div className=" sm:!grid sm:!grid-cols-2 category-container sm:!w-full justify-between items-center w-full    sm:!overflow-x-hidden sm:!mx-auto sm:object-cover">
         {BrowseCategory.map((category, index) => (
-          <div className="category-card" key={index}>
-            <div className="category-img">
+          <div
+            className="category-card   sm:!w-[172px] sm:!h-[218px] sm:!gap-[16px]  sm:flex-col sm:items-center sm:justify-center sm:!text-center "
+            key={index}
+          >
+            <div className="category-img sm:!w-[172px] sm:!h-[152px]">
               <img
                 src={category.image}
                 alt={category.title}
-                className="category-image"
+                className="category-image sm:!w-[122px] sm:!h-[104px] "
               />
             </div>
-            <div className="category-discription">
-              <h3 className="category-title">{category.title}</h3>
-              <p className="category-description">{category.description}</p>
+            <div className="sm:flex  sm:flex-col category-discription sm:!w-[162px] sm:!h-[50px] sm:!text-center sm:!items-center sm:!justify-center sm:!gap-0">
+              <h3 className="category-title sm:!text-[14px] sm:!w-[162px]">
+                {category.title}
+              </h3>
+              <p className="sm:flex category-description sm:!justify-center sm:items-center sm:!text-[12px] sm:!w-[162px]">
+                {category.description}
+              </p>
             </div>
           </div>
         ))}
