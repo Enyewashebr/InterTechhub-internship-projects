@@ -26,6 +26,10 @@ const products = [
     price: 500,
     rating: "2k+",
     category: "Women",
+    // Leftproduct: "50 units left",
+    // message: "+ Shipping fee may vary on location",
+    // availableSizes: [25, 26, 27, 28],
+    // availableColors: ["Pink", "Blue"],
   },
   {
     image: shoes,
@@ -34,6 +38,10 @@ const products = [
     price: 150,
     rating: "1k+",
     category: "Kids",
+    // Leftproduct: "50 units left",
+    // message: "+ Shipping fee may vary on location",
+    // availableSizes: [25, 26, 27, 28],
+    // availableColors: ["Pink", "Blue"],
   },
   {
     image: dress,
@@ -42,6 +50,10 @@ const products = [
     price: 300,
     rating: "5k+",
     category: "Women",
+    // Leftproduct: "50 units left",
+    // message: "+ Shipping fee may vary on location",
+    // availableSizes: [25, 26, 27, 28],
+    // availableColors: ["Pink", "Blue"],
   },
 ];
 const ProductList = () => {

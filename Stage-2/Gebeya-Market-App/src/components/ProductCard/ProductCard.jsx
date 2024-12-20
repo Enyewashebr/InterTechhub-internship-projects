@@ -1,11 +1,25 @@
 
 import "./ProductCard.css";
 import PropTypes from "prop-types";
+// import { useNavigate } from "react-router-dom";
+// import { useCart } from "../../Pages/Cart/CartContext";
 
 
 const ProductCard = ({ image, name, brand, price, rating, category }) => {
 
-  
+  // const navigate = useNavigate();
+  //  const { addToCart } = useCart();
+
+//  const handleAddToCart = (product) => {
+//    const cartItem = {
+//      ...product,
+//      selectedSize: product.availableSizes[0], // Default size
+//      selectedColor: product.availableColors[0], // Default color
+//    };
+//    addToCart(cartItem); // Add to global cart state
+//    navigate("/cart");
+//  };
+
 
 
   return (
@@ -44,7 +58,10 @@ const ProductCard = ({ image, name, brand, price, rating, category }) => {
               ${price !== undefined ? price : "N/A"}
             </span>
           </div>
-          <button className="flex add-to-cart-btn sm:absolute sm:!w-[155px] sm:!h-[37px] sm:left-[80px] sm:!text-center sm:!text-[14px] sm:bottom-5 justify-center items-center">
+          <button
+            className="flex add-to-cart-btn sm:absolute sm:!w-[155px] sm:!h-[37px] sm:left-[80px] sm:!text-center sm:!text-[14px] sm:bottom-5 justify-center items-center"
+            
+          >
             Add to cart
           </button>
         </div>

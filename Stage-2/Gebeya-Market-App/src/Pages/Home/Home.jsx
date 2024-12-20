@@ -44,7 +44,7 @@ const Home = () => {
             Discover a world of convenience with our user-friendly platform,
             curaated collections, and exceptional customer service
           </p>
-          <button className="flex justify-center w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px]  font-poppins font-600 text-24  bg-[#FEA301] top-[170px] font-poppins font-500 text-24 sm:w-[382px] sm:absolute sm:top-[300px] sm:h-[44px]  sm:rounded-[8px] sm:text-[16px] sm:font-500 sm:leading-[24px] sm:ml-[-158px] sm:mt-[20px] sm:cursor-pointer">
+          <button className="flex justify-center w-[366px] h-[66px] relative top-[40 px] pt-[10px] gap-[10px]  font-poppins font-600 text-24  bg-[#FEA301] top-[170px] font-poppins font-500 text-24 sm:w-[382px] sm:absolute sm:top-[300px] sm:h-[44px]  sm:rounded-[8px] sm:text-[16px] sm:font-500 sm:leading-[24px] sm:ml-[-158px] sm:mt-[20px] sm:cursor-pointer items-center text-[16px] rounded-[10px]">
             Explore Now
           </button>
         </div>
